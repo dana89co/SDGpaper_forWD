@@ -91,5 +91,5 @@ Change_PSA2<-Change_PSA2  %>% layout(scene = list(xaxis = list(title = 'Poverty 
 
 #Save files:
 
-saveWidget(Status05_PSN, "Status05_PSN.html")
-zip::zip("Status05_PSN.zip", c("Status05_PSN.html", "lib"))
+saveWidget(Status05_PSN, "Status05_PSN.html", selfcontained = F, libdir = "lib05")
+zip::zip("Status05_PSN.zip", c("Status05_PSN.html", "lib05"))
