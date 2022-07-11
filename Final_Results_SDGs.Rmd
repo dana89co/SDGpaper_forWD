@@ -62,7 +62,7 @@ Change_PSN<-plot_ly(LaoSDG_ALL_LC, x = ~PovChange, y = ~StuntChange, z = ~(-NatC
         size= ~tot_pop15, marker = list(symbol = 'circle', sizemode = 'diameter'), sizes = c(5, 50))
 Change_PSN<-Change_PSN  %>% layout(scene = list(xaxis = list(title = 'Poverty Change'),
                       yaxis = list(title = 'Stunting Change'),
-                      zaxis = list(title = 'Natural Degradation')))
+                      zaxis = list(title = 'Natural Loss')))
 
 Change_PSC<-plot_ly(LaoSDG_ALL_LC, x = ~PovChange, y = ~StuntChange, z = ~cropland, type = "scatter3d", mode = "markers", color=~factor(Province), 
         size= ~tot_pop15, marker = list(symbol = 'circle', sizemode = 'diameter'), sizes = c(5, 50))
@@ -74,7 +74,7 @@ Change_PSN2<-plot_ly(LaoSDG_ALL_LC, x = ~PovChange, y = ~StuntChange, z = ~(-Nat
         size= ~RelPopGr, marker = list(symbol = 'circle', sizemode = 'diameter'), sizes = c(5, 50))
 Change_PSN2<-Change_PSN2  %>% layout(scene = list(xaxis = list(title = 'Poverty Change'),
                       yaxis = list(title = 'Stunting Change'),
-                      zaxis = list(title = 'Natural Degradation p.c ')))
+                      zaxis = list(title = 'Natural Loss p.c ')))
 
 Change_PSC2<-plot_ly(LaoSDG_ALL_LC, x = ~PovChange, y = ~StuntChange, z = ~Croppop, type = "scatter3d", mode = "markers", color=~factor(Province), 
         size= ~RelPopGr, marker = list(symbol = 'circle', sizemode = 'diameter'), sizes = c(5, 50))
