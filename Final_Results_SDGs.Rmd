@@ -14,7 +14,6 @@ output:
 ---
 background-image: url(Pictures/Contribution.jpg)
 background-size: cover
-
 class: inverse, center, middle
 
 # Status SDGs
@@ -26,6 +25,7 @@ library(readxl)
 library(PerformanceAnalytics)
 
 LaoSDG_ALL_LC <-read_excel("IndicatorPSN_1221.xlsx")
+
 
 LaoSDG_ALL_LC$Natpop<-LaoSDG_ALL_LC$Natpop15-LaoSDG_ALL_LC$Natpop05
 LaoSDG_ALL_LC$LNatpop<-LaoSDG_ALL_LC$LNatpop15-LaoSDG_ALL_LC$LNatpop05
@@ -126,7 +126,6 @@ class: inverse, center, middle
 
 # Change SDGs: Agricultural Areas
 ---
-
 # Change 2005-2015: Agricultural Areas
 
 ```{r,echo=FALSE, message=FALSE, warning=FALSE, out.width="100%"}
@@ -145,7 +144,6 @@ class: inverse, center, middle
 
 # Change SDGs: Cropland Areas
 ---
-
 # Changes 2005-2015: Cropland Areas
 
 ```{r,echo=FALSE, message=FALSE, warning=FALSE, out.width="100%"}
