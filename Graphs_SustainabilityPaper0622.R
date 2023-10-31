@@ -84,7 +84,7 @@ p1<-ggplot(LaoSDG_ALL_LC, aes(x=Pov05, y=PovChange))+
   xlab("Poverty 2005") + ylab("Poverty Change (p.p.)")+
   scale_colour_discrete(name="Significance Poverty",labels=c("No","Yes"))+
   theme(legend.position = "bottom")+
-  labs(title = paste("A. Corr =",signif(Corr_P$r[1,2], 2),
+  labs(title = paste("B. Corr =",signif(Corr_P$r[1,2], 2),
                      " P value =",signif(Corr_P$P[1,2], 2)))+ 
   theme(plot.title = element_text(size=12))
 
@@ -102,7 +102,7 @@ p3<-ggplot(LaoSDG_ALL_LC, aes(x=PerNatural05, y=-NatChange))+ #Final
   geom_point(colour="turquoise3",size=2)+
   geom_smooth(method='lm', formula= y~x, se=TRUE)+
   xlab("Natural Area 2005") + ylab("Natural Area Change (p.p.)")+
-  labs(title = paste("A. Corr =",signif(Corr_N$r[1,2], 2),
+  labs(title = paste("C. Corr =",signif(Corr_N$r[1,2], 2),
                      " P value =",signif(Corr_N$P[1,2], 2)))+
   theme(plot.title = element_text(size=12))
 
@@ -113,7 +113,7 @@ p3<-ggplot(LaoSDG_ALL_LC, aes(x=PerNatural05, y=-NatChange))+ #Final
 #   labs(title = paste(" Slope =",signif(fitLN$coef[[2]], 4),
 #                      " P value =",signif(summary(fitLN)$coef[2,4], 4)))
 
-grid.arrange(p1,p2,p3,nrow=1)
+grid.arrange(p2,p1,p3,nrow=1)
 
 rm(fitLN, fitN, fitP, fitS)
 rm(p1,p2,p3)
